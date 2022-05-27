@@ -33,23 +33,30 @@ rice is not on the menu
 ### 🍋 Given the following list of students:
 
 ```dart
+class Student {
+  String name;
+  String major;
+  List<int> marks;
+  Student({required this.name,required this.major,required this.marks});
+}
+
 void main() {
-  List<Map<String,dynamic>> students = [
-    {
-      'name': 'omar',
-      'major': 'engineering',
-      'marks': [75, 83, 70, 74, 88],
-    },
-    {
-      'name': 'mohammad',
-      'major': 'medicine',
-      'marks': [95, 82, 89, 98, 85],
-    },
-    {
-      'name': 'salem',
-      'major': 'literature',
-      'marks': [60, 80, 67, 55, 77],
-    },
+  List<Student> students = [
+    Student(
+      name: 'omar',
+      major: 'engineering',
+      marks: [75, 83, 70, 74, 88],
+    ),
+    Student(
+      name: 'mohammad',
+      major: 'medicine',
+      marks: [95, 82, 89, 98, 85],
+    ),
+    Student(
+      name: 'salem',
+      major: 'literature',
+      marks: [60, 80, 67, 55, 77],
+    ),
   ];
 }
 ```
