@@ -37,6 +37,7 @@ class Student {
   String name;
   String major;
   List<int> marks;
+  double average = 0;
   Student({required this.name,required this.major,required this.marks});
 }
 
