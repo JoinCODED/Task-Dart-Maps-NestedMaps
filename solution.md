@@ -98,90 +98,89 @@ void main() {
 1. First let's iterate over our `list` of `students`:
 
 ```dart
-  for (Map<String,dynamic> student in students) {
-  }
+   for (Student student in students) {}
 ```
 
 2. Now create a variable for `marks` and extract the `marks` list for each `student`:
 
 ```dart
-  for (Map<String,dynamic> student in students) {
-      final marks = student['marks'];
+  for (Student student in students) {
+    final marks = student.marks;
   }
 ```
 
-3. We need to tell dart that this is a list of integers using the `as` keyword:
+3. Create a variable to store the sum of all marks:
 
 ```dart
-  for (Map<String,dynamic> student in students) {
-      final marks = student['marks'] as List<int>;
+    for (Student student in students) {
+    final marks = student.marks;
+    int sum = 0;
   }
 ```
 
-4. Create a variable to store the sum of all marks:
+4. Loop over the list of `marks` and sum all elements:
 
 ```dart
-  for (Map<String,dynamic> student in students) {
-      final marks = student['marks'] as List<int>;
-      int sum = 0;
-  }
-```
-
-5. Loop over the list of `marks` and sum all elements:
-
-```dart
-  for (Map<String,dynamic> student in students) {
-      final marks = student['marks'] as List<int>;
-      int sum = 0;
+  for (Student student in students) {
+    final marks = student.marks;
+    int sum = 0;
     for (int mark in marks) {
       sum += mark;
     }
   }
 ```
 
-6. Create a variable and store the average in it:
+5. Create a variable and store the average in it:
 
 ```dart
 final average = sum / marks.length;
 ```
 
-7. Add the new value we just created to the `student` map under the key of `average`:
+6. Add the new value we just created to the `student` map under the key of `average`:
 
 ```dart
-student['average'] = average;
+student.average = average;
 ```
 
-8. Finally, print the `student`:
+7. Finally, print the `student` average:
 
 ```dart
+class Student {
+  String name;
+  String major;
+  List<int> marks;
+  double average = 0;
+  Student({required this.name, required this.major, required this.marks});
+}
+
 void main() {
-  List<Map<String,dynamic>> students = [
-    {
-      'name': 'omar',
-      'major': 'engineering',
-      'marks': [75, 83, 70, 74, 88],
-    },
-    {
-      'name': 'mohammad',
-      'major': 'medicine',
-      'marks': [95, 82, 89, 98, 85],
-    },
-    {
-      'name': 'salem',
-      'major': 'literature',
-      'marks': [60, 80, 67, 55, 77],
-    },
+  List<Student> students = [
+    Student(
+      name: 'omar',
+      major: 'engineering',
+      marks: [75, 83, 70, 74, 88],
+    ),
+    Student(
+      name: 'mohammad',
+      major: 'medicine',
+      marks: [95, 82, 89, 98, 85],
+    ),
+    Student(
+      name: 'salem',
+      major: 'literature',
+      marks: [60, 80, 67, 55, 77],
+    ),
   ];
 
-    for (Map<String,dynamic> student in students) {
-      final marks = student['marks'] as List<int>;
+    for (Student student in students) {
+      final marks = student.marks;
       int sum = 0;
     for (int mark in marks) {
       sum += mark;
     }
     final average = sum / marks.length;
-    student['average'] = average;
-    print(student);
+    student.average = average;
+    print(student.average);
   }
 }
 ```
