@@ -1,6 +1,6 @@
 ### 🍋 Maps
 
-Given the following map of a restaurant menu:
+Given the following Map of a restaurant menu:
 
 ```dart
 const menu = {
@@ -24,7 +24,7 @@ Output:
 Total: $6.5
 ```
 
-and if an order element is not on the menu, the output should be:
+If an order element is not on the menu, the output should be:
 
 ```
 rice is not on the menu
@@ -62,4 +62,4 @@ void main() {
 }
 ```
 
-The professor wants to calculate the average mark for each student, and then adds it as an `'average': value` key-value pair for that student.
+The professor wants to calculate the average mark for each student, and add it as an `'average': value` key-value pair.
