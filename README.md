@@ -1,3 +1,7 @@
+### Setup
+1. Fork and clone [this repo](https://github.com/JoinCODED/Task-Dart-Maps-NestedMaps).
+2. Write your code in `main.dart`.
+
 ### 🍋 Given the following list of students:
 
 ```dart
@@ -44,7 +48,7 @@ const menu = {
 };
 ```
 
-Calculate the total for a given order.
+1. Calculate the total for a given order.
 
 Example:
 
@@ -58,7 +62,7 @@ Output:
 Total: $6.5
 ```
 
-and if an order element is not on the menu, the output should be:
+2. If an order element is not on the menu, the output should be:
 
 ```
 rice is not on the menu
