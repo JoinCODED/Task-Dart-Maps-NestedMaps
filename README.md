@@ -2,41 +2,7 @@
 1. Fork and clone [this repo](https://github.com/JoinCODED/Task-Dart-Maps-NestedMaps).
 2. Write your code in `main.dart`.
 
-### 🍋 Given the following list of students:
-
-```dart
-class Student {
-  String name;
-  String major;
-  List<int> marks;
-  double average = 0;
-  Student({required this.name,required this.major,required this.marks});
-}
-
-void main() {
-  List<Student> students = [
-    Student(
-      name: 'omar',
-      major: 'engineering',
-      marks: [75, 83, 70, 74, 88],
-    ),
-    Student(
-      name: 'mohammad',
-      major: 'medicine',
-      marks: [95, 82, 89, 98, 85],
-    ),
-    Student(
-      name: 'salem',
-      major: 'literature',
-      marks: [60, 80, 67, 55, 77],
-    ),
-  ];
-}
-```
-
-The professor wants to calculate the average mark for each student, and then adds it as an `'average': value` key-value pair for that student.
-
-### Bonus: 🍋 Maps
+ 🍋 Maps
 
 Given the following map of a restaurant menu:
 
